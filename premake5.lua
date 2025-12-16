@@ -20,10 +20,9 @@ workspace "WFAnniversaryPatch"
    includedirs { "source/injector" }
    includedirs { "source/inireader" }
 
-   date = os.outputof("date /t")
-   yy = tonumber(string.sub(date, 9, 10))
-   mm = tonumber(string.sub(date, 4, 5))
-   dd = tonumber(string.sub(date, 1, 2))
+   yy = os.date("%y")
+   mm = os.date("%m")
+   dd = 0 -- os.date("%d")
    build = 0
 
    defines {
